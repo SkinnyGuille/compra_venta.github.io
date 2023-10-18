@@ -1,0 +1,220 @@
+/* Estilo para el cuerpo de la página */
+body {
+    background-size: cover;
+    background-position: center;
+   background-image: url("humo-de-color_2560x1440_xtrafondos.com.jpg");
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* Estilo para el encabezado */
+.header {
+   top: 0%;
+    background-color: #1e5799;
+    padding: 7px;
+    text-align: center;
+}
+.menu-logo {
+    display: flex;
+    position: fixed;
+    border-radius: 50%;
+    z-index: 1100;
+   
+    width: 90px;
+    margin: 10px;
+}
+
+.contenedorlogo {
+    margin-bottom: 20px;
+}
+
+.nombredellogo {
+    font-size: 36px;
+    margin: 0;
+    color: white;
+}
+
+/* Estilo para la barra de navegación */
+.barra {
+    text-align: center;
+}
+
+.barra a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    margin: 0 20px;
+}
+
+/* Estilo para los títulos */
+h1, h2 {
+    text-align: center;
+    color: white;
+}
+
+/* Estilo para los párrafos */
+p {
+    font-size: 30px;
+    text-align: center;
+    justify-content:left;
+    margin: 30px;
+    color:white;
+}
+
+/* Estilo para las imágenes */
+img {
+    display: block;
+    margin:  auto;
+}
+.barra{
+    
+    padding: 0;
+    background-color: rgb(21, 124, 184);
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+.barra a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: inline-block;
+}
+.barra a:hover{
+    background-color: rgb(87, 3, 75);
+}
+h3 {
+    text-decoration: underline;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(243, 243, 243);
+}
+/*carrucel*/
+.article-carrusel{
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+   
+    margin-top: 40px;
+    margin-bottom: 200px;
+  }
+  .article-carrusel__div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #foto-carrusel{
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 300px;
+    min-height: 300px;
+  }
+  .article-carrusel__div button{
+    margin: 20px;
+    border: none;
+    background: transparent;
+  }
+  .article-carrusel__div button img{
+    width: 50px;
+  }
+  .article-carrusel__div button img:hover{
+    border: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px #000;
+  }
+    /*Formulario*/  
+    .main-Formulario{
+        height: 900px;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        background-image: url(Imagenes/fondo-Formulario.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: auto;
+      }
+      .main-Formulario__form{
+        display: flex;
+        background: #424242b0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .div-input{
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        color: #f3e5e5;
+        text-align: center;
+        text-shadow: 1px 1px 4px #000,1px 1px 4px #000;  
+      }
+      .input{
+        width: 100%;
+        margin: 15px;
+        background: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid #ffffff;
+        color: #ffffff;
+      }
+      .input:focus{
+        background: linear-gradient(to bottom, transparent, #aaa);
+        color: #000;
+      }
+      .input:hover{
+        background: linear-gradient(to bottom, transparent, #aaa);
+        color: #000;
+      }
+      .div-input textarea{
+        height: 120px;
+        width: 500px;
+        resize: none;
+        border: 1px solid #ffffff;
+      }
+      .input-submit{
+        display: flex;
+        background: transparent;
+        color: #dacece;
+        border: 1px solid #ffffff;
+        padding: 5px;
+      }
+      .input-submit:hover{
+        background-color: #aaa;
+        color: #000;
+      }
+      .error{
+        border: 1px solid red;
+      }
+      #errorInput{
+        border: 1px solid red;
+        padding: 5px;
+        display: none;
+      }
+      #errorInput p{
+        color: red;
+      }
+      .article-form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f7ad3e;  
+      }
+      #repuesta{
+        display: flex;
+        flex-direction: column;
+        background: #f1a533;
+        color:#ffffff;
+        padding: 10px;
+      }
+      
+      

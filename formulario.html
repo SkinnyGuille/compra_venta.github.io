@@ -1,0 +1,52 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CelebriCar  venta de Alta Gama</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="carrucel.js"></script>
+</head>
+
+
+<body>
+   <header class="header">
+    <div class="contenedorlogo">
+        <img src="diseño.jpg" alt="Icono" class="menu-logo">
+        <h1 class="nombredellogo">CelebriCar</h1>
+    </div>
+    <nav class="barra">
+        <a id="2.0" class="new-link"href="ventasdeauto.html">
+        <b>Inicio</b>
+        <a id="2.0" class="new-link"href="autosusados.html">
+        <b>Elige tu Auto </b></a>
+      
+    </nav>
+</header> 
+<form class="main-Formulario__form" onsubmit="return validarInput()">
+    <div class="div-input">
+        <h3>Ingrese su Gmail</h3>
+        <input type="text" class="input" id="email">
+    </div>
+    <div class="div-input">
+        <h3>Ingrese su Nombre</h3>
+        <input type="text" class="input" id="nombre">
+    </div>
+    <div class="div-input">
+        <h3>Ingrese su Apellido</h3>
+        <input type="text" class="input" id="apellido">
+    </div>
+    <div class="div-input">
+        <h3>Ingrese el motivo de consulta</h3>
+        <input type="text" class="input" id="consulta">
+    </div>
+    <div class="div-input">
+        <h3>Ingrese la consulta</h3>
+        <textarea class="input" id="textarea"></textarea>
+    </div>
+        <input type="submit" class="input-submit">
+    <div id="errorInput">
+
+    </div>
+</form>
+
+</body>
+
