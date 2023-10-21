@@ -23,8 +23,8 @@ function fotoactual (){
     var contimg = document.getElementById ("foto-carrusel");
     contimg.src = imagenes [cont];
 }
-let patter6= /^\w+@\w+(\.\w{2,4})+$/;
-let patter5= /^[a-zA-Z]+$/;
+let pattern6 = /^[\wñ]+@[\wñ]+(\.[\wñ]{2,4})+$/;
+let pattern5 = /^[a-zA-Zñ]+$/;
 
 function validarInput (){
     let email = document.querySelector("#email");
