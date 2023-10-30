@@ -98,7 +98,8 @@ h3 {
     text-shadow: 1px 0px 4px #000000, 1px 0px 4px #000000, 1px 0px 4px #000000, 1px 0px 4px #000000;  
 }
 a{
-  background-color: #3f3f3f5e;
+ 
+  background-color: #6363635e;
   font-size: 30px;
   text-align: center;
   justify-content:left;
@@ -335,4 +336,36 @@ background-image: url("b11.jpg");
 .autosusados{
   background-image: url("llanta.jpg");
   height: 300vh;
+}
+.auto1{
+  display: flex;
+  flex-direction: row;
+}
+.auto2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.auto3{
+display: flex;
+flex-wrap: wrap;
+
+
+}
+.auto4{
+  display: flex;
+  flex-wrap: wrap;
+  
+
+}
+.auto5{
+  display: flex;
+  flex-wrap: wrap;
+  
+
+}
+.auto6{
+display: flex;
+flex-direction: row;
+
 }
