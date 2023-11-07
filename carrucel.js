@@ -23,131 +23,62 @@ function fotoactual (){
     var contimg = document.getElementById ("foto-carrusel");
     contimg.src = imagenes [cont];
 }
-let pattern6 = /^[\wñ]+@[\wñ]+(\.[\wñ]{2,4})+$/;
-let pattern5 = /^[a-zA-Zñ]+$/;
 
 
-function validarInput (){
-    let email = document.querySelector("#email");
-    email.classList.remove("error");
+/*---------------------------------------------------FORNULARIO--------------------*/ 
 
-    let nombre = document.querySelector("#nombre");
-    nombre.classList.remove("error");
+function validarFormulario() {
+   
+    var nombre = document.getElementById("nombre").value;
+    var email = document.getElementById("email").value;
+    var edad = document.getElementById("edad").value;
+    var mensaje = document.getElementById("mensaje").value;
 
-    let apellido = document.querySelector("#apellido");
-    apellido.classList.remove("error");
 
-    let consulta = document.querySelector("#consulta");
-    consulta.classList.remove("error");
+    var mensajeError = "";
 
-    let textarea = document.querySelector("#textarea");
-    textarea.classList.remove("error");
+
+    if (nombre.length === 0 || nombre.length > 30) {
+        mensajeError += "Nombre inválido. Debe tener entre 1 y 30 caracteres.\n";
+        document.getElementById("error-nombre").textContent = "Nombre inválido";
+    } else {
+        document.getElementById("error-nombre").textContent = "";
+    }
+
+   
+    if (email.length > 0 && !email.includes("@")) {
+        mensajeError += "Email inválido. Debe contener un @.\n";
+        document.getElementById("error-email").textContent = "Email inválido";
+    } else {
+        document.getElementById("error-email").textContent = "";
+    }
+
     
-    let errorInput = document.querySelector("#errorInput");
-    errorInput.innerHTML= "";
-    errorInput.style.display = "none";
-
-    let repuesta = document.querySelector("#repuesta");
-    var verificador = false;
-
-
-
-    if(!patter6.test(email.value)){
-        let p = document.createElement("p");
-        p.innerHTML= "Se ingreso incorrectamente el mail";
-        email.classList.add("error");
-        errorInput.appendChild(p);
-        verificador=true;
-    }
-    if (email.value == ""){
-        let p = document.createElement("p");
-        p.innerHTML= "Ingrese un mail para continuar";
-        email.classList.add("error");
-        errorInput.appendChild(p);
-        verificador=true;
+    if (edad < 18 || edad >= 100) {
+        mensajeError += "Edad inválida. Debe ser mayor a 18 años.\n";
+        document.getElementById("error-edad").textContent = "Edad inválida";
+    } else {
+        document.getElementById("error-edad").textContent = "";
     }
 
-
-
-    if(!patter5.test(nombre.value)){
-        let p = document.createElement("p");
-        p.innerHTML= "Se ingreso incorrectamente el Nombre";
-        nombre.classList.add("error");
-        errorInput.appendChild(p);
-        verificador=true;
-    }
-    if (nombre.value == ""){
-        let p = document.createElement("p");
-        p.innerHTML= "Ingrese su Nombre para continuar";
-        nombre.classList.add("error");
-        errorInput.appendChild(p);
-        verificador=true;
+   
+    if (mensaje.length === 0 || mensaje.length > 200) {
+        mensajeError += "Mensaje inválido. Debe tener entre 1 y 200 caracteres.\n";
+        document.getElementById("error-mensaje").textContent = "Mensaje inválido";
+    } else {
+        document.getElementById("error-mensaje").textContent = "";
     }
 
-
-
-    if(!patter5.test(apellido.value)){
-        let p = document.createElement("p");
-        p.innerHTML= "Se ingreso incorrectamente su Apellido";
-        apellido.classList.add("error");
-        errorInput.appendChild(p);
-        verificador=true;
-    }
-    if (apellido.value == ""){
-        let p = document.createElement("p");
-        p.innerHTML= "Ingrese su Apellido para continuar";
-        apellido.classList.add("error");
-        errorInput.appendChild(p);
-        verificador=true;
+    if (mensajeError !== "") {
+        alert("Corrija los siguientes errores:\n" + mensajeError);
+        return false;
     }
 
+   
+    var datosIngresados = "Nombre: " + nombre + "<br>Email: " + email + "<br>Edad: " + edad + "<br>Mensaje: " + mensaje;
+    document.getElementById("datos-ingresados").innerHTML = datosIngresados;
+    document.getElementById("formulario").style.display = "none";
+    document.getElementById("mensaje-enviado").style.display = "block";
 
-    if(!patter5.test(consulta.value)){
-        let p = document.createElement("p");
-        p.innerHTML= "Se ingreso incorrectamente el Motivo de la consulta";
-        consulta.classList.add("error");
-        errorInput.appendChild(p);
-        verificador=true;
-    }
-    if (consulta.value == ""){
-        let p = document.createElement("p");
-        p.innerHTML= "Ingrese su Motivo de consulta para continuar";
-        consulta.classList.add("error");
-        errorInput.appendChild(p);
-        verificador=true;
-    }
-
-
-    if (textarea.value == ""){
-        let p = document.createElement("p");
-        p.innerHTML= "Ingrese su Motivo de consulta para continuar";
-        textarea.classList.add("error");
-        errorInput.appendChild(p);
-        verificador=true;
-    }
-
-    if(verificador){
-        errorInput.style.display="initial";
-    }else{
-        let titulo = document.createElement("h2");
-        titulo.innerHTML= "Se envio su consulta correctamente";
-        let e = document.createElement("p");
-        e.innerHTML= "Email: "+ email.value;
-        let n = document.createElement("p");
-        n.innerHTML= "Nombre: "+ nombre.value;
-        let a = document.createElement("p");
-        a.innerHTML= "Apellido: "+ apellido.value;
-        let c = document.createElement("p");
-        c.innerHTML= "Su motivo de consulta: "+ consulta.value;
-        let t = document.createElement("p");
-        t.innerHTML= "Su consulta: "+ textarea.value;
-
-        repuesta.appendChild(titulo);
-        repuesta.appendChild(e);
-        repuesta.appendChild(n);
-        repuesta.appendChild(a);
-        repuesta.appendChild(c);
-        repuesta.appendChild(t);
-    }
-    return false;
+    return false; 
 }

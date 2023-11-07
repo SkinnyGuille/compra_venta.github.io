@@ -22,33 +22,36 @@
       
     </nav>
 </header> 
-<form class="main-Formulario__form" onsubmit="return validarInput()">
-    <div class="div-input">
-        <h3>Ingrese su Email</h3>
-        <input type="text" class="input" id="email">
-    </div>
-    <div class="div-input">
-        <h3>Ingrese su Nombre</h3>
-        <input type="text" class="input" id="nombre">
-        
-    </div>
-    <div class="div-input">
-        <h3>Ingrese su Apellido</h3>
-        <input type="text" class="input" id="apellido">
-    </div>
-    <div class="div-input">
-        <h3>Ingrese el motivo de consulta</h3>
-        <input type="text" class="input" id="consulta">
-    </div>
-    <div class="div-input">
-        <h3>Ingrese la consulta</h3>
-        <textarea class="input" id="textarea"></textarea>
-    </div>
-        <input type="submit" class="input-submit">
-    <div id="errorInput">
-
-        
-</form>
+<div id="formulario-container">
+    <form id="formulario" onsubmit="return validarFormulario()">
+        <h3>Formulario de Contacto</h3>
+        <div class="div-input">
+            <label for="nombre">Nombre :</label>
+            <input type="text" id="nombre" maxlength="30" required>
+            <div class="error" id="error-nombre"></div>
+        </div>
+        <div class="div-input">
+            <label for="email">Email:</label>
+            <input type="email" id="email" maxlength="20">
+            <div class="error" id="error-email"></div>
+        </div>
+        <div class="div-input"> 
+          <label for="edad">Edad ( Debe ser mayor a 18):</label>
+        <input type="text" id="edad" required pattern="\d*" title="Ingresa solo numeros">
+        <div class="error" id="error-edad"></div>
+        </div>
+        <div class="div-input">
+            <label for="mensaje">Asunto:</label>
+            <textarea id="mensaje" maxlength="200" required></textarea>
+            <div class="error" id="error-mensaje"></div>
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+<div id="mensaje-enviado" style="display: none;">
+    <h3>Mensaje enviado</h3>
+    <div  id="datos-ingresados"></div>
+</div>
 
 </body>
 

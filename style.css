@@ -146,185 +146,65 @@ a{
     box-shadow: 0px 0px 4px #000;
   }
     /*Formulario*/  
-    .main-Formulario{
-  background-image: url("gg1.jpg");
-  height: 900px;
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: auto;
-}
-.main-Formulario__form{
-  display: flex;
-  background: #424242b0;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.div-input{
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-  color: #f3e5e5;
-  text-align: center;
-  text-shadow: 1px 1px 4px #000,1px 1px 4px #000;  
-}
-.input{
-  width: 100%;
-  margin: 15px;
-  background: transparent;
-  outline: none;
-  border: none;
-  border-bottom: 2px solid #ffffff;
-  color: #ffffff;
-}
-.input:focus{
-  background: linear-gradient(to bottom, transparent, #aaa);
-  color: #000;
-}
-.input:hover{
-  background: linear-gradient(to bottom, transparent, #aaa);
-  color: #000;
-}
-.div-input textarea{
-  height: 120px;
-  width: 500px;
-  resize: none;
-  border: 1px solid #ffffff;
-}
-.input-submit{
-  display: flex;
-  background: transparent;
-  color: #dacece;
-  border: 1px solid #ffffff;
-  padding: 5px;
-}
-.input-submit:hover{
-  background-color: #aaa;
-  color: #000;
-}
-.error{
-  border: 1px solid red;
-}
-#errorInput{
-  border: 1px solid red;
-  padding: 5px;
-  display: none;
-}
-#errorInput p{
-  color: red;
-}
-.article-form{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f7ad3e;  
-}
-#repuesta{
-  display: flex;
-  flex-direction: column;
-  background: #f1a533;
-  color:#ffffff;
-  padding: 10px;
-}
-.main-Formulario{
-    height: 900px;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: auto;
-  }
-  .main-Formulario__form{
-    display: flex;
-    background: #000000b0;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .div-input{
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    color: #f3e5e5;
-    text-align: center;
-    text-shadow: 1px 1px 4px #000,1px 1px 4px #000;  
-  }
-  .input{
-    width: 100%;
-    margin: 15px;
-    background: transparent;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid #ffffff;
-    color: #ffffff;
-  }
-  .input:focus{
-    background: linear-gradient(to bottom, transparent, #aaa);
-    color: #000;
-  }
-  .input:hover{
-    background: linear-gradient(to bottom, transparent, #aaa);
-    color: #000;
-  }
-  .div-input textarea{
-    height: 120px;
-    width: 500px;
-    resize: none;
-    border: 1px solid #ffffff;
-  }
-  .input-submit{
-    display: flex;
-    background: transparent;
-    color: #dacece;
-    border: 1px solid #ffffff;
-    padding: 5px;
-  }
-  .input-submit:hover{
-    background-color: #aaa;
-    color: #000;
-  }
-  .error{
-    border: 1px solid red;
-  }
-  #errorInput{
-    border: 1px solid red;
-    padding: 5px;
-    display: none;
-  }
-  #errorInput p{
-    color: red;
-  }
-  .article-form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f7ad3e;  
-  }
-  #repuesta{
-    display: flex;
-    flex-direction: column;
-    background: #f1a533;
-    color:#ffffff;
-    padding: 10px;
-  }
-  .formulariob{
-    background-image: url("gg1.jpg");
+  
+.formulariob {
+  font-family: Arial, sans-serif;
+  background-image: url('gg1.jpg');
+ 
 
-  }
+}
+
+#formulario-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #6767673d;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(225, 39, 39, 0.1);
+}
+
+.div-input {
+  margin-bottom: 15px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 0px 4px #000000, 1px 0px 4px #000000, 1px 0px 4px #000000, 1px 0px 4px #000000;  
+
+}
+
+label {
+  display: block;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+#mensaje-enviado {
+  text-align: center;
+}
+h3{
+  font-size: 30px;
+  text-align: center;
+  color: rgb(243, 243, 243);
+  text-shadow: 1px 0px 4px #000000, 1px 0px 4px #000000, 1px 0px 4px #000000, 1px 0px 4px #000000;  
+
+}
+#datos-ingresados{
+  border: 1px solid #2b2b2b9f;
+  font-size: 30px;
+  text-align: center;
+  color: rgb(243, 243, 243);
+  text-shadow: 1px 0px 4px #000000, 1px 0px 4px #000000, 1px 0px 4px #000000, 1px 0px 4px #000000;  
+}
   .huevo{
     background-image: url("j1.jpg");
     height: 120vh;
